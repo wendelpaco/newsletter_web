@@ -1,0 +1,27 @@
+
+<div class="row avatar">
+  <div class="col-md-offset-2">
+    <div class="card no-border">
+      <%= image_tag('favicon/newsletter.png',class:"card-img-top", alt:"image") %>
+    </div>
+  </div>
+</div>
+
+<div class="row ">
+  <div class="container fix-container">
+     <h3>Notícias sobre Criptomoedas para quem não tem tempo de ler notícias.</h3>
+     <p class="card-text" style= "font-size: 12px;">Junte-se à nossa turma de 
+      <%= link_to subscribes_path do %>
+        <b style="text-decoration: underline;"><%= @total_members %> leitores ativos:</b>
+      <% end %>
+     </p>
+    </div>
+</div>
+
+<div class="row pt-4" style="justify-content: center;">
+  <div class="col-md-4">
+    <%= render "shared/form", subscribe: @subscribe %>
+  </div>
+</div>
+
+ <%= render partial: 'shared/adsense' %>

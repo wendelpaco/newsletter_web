@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.avatar {
+    justify-content: center;
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 30%;
+    }
+    .no-border {
+        border: 0;
+        background-color: #f8f9fa !important
+    }
+}
+
+.title {
+    display: contents;
+    margin: 2rem 1rem;
+    line-height: 1.3;
+    text-align: center;
+    max-width: 550px;
+    letter-spacing: -0.02em;
+}
+
+.decoration {
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.email-button {
+    width: 100%;
+    margin: 0.7rem 0;
+    height: 2.81rem;
+    border-radius: 7px;
+    background-color: #0070f3;
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+    color: white;
+    -webkit-transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    border: none;
+    font-size: inherit;
+}
+
+.icon-my {
+    position: relative;
+}
+
+.icon-my i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+    color: inherit;
+    font-size: 18px;
+}
+
+input.form-control {
+    padding-left: 45px
+}
+
+.my-card:nth-of-type(3n+1) {
+    margin: 0 auto;
+}
+
+.fix {
+    width: 90%;
+    font-size: 12px;
+}
+
+.fix span {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.fix-container {
+    width: 60%;
+    text-align: center;
+}
