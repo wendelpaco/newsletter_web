@@ -11,9 +11,7 @@
   </head>
 
   <body class="bg-light">
-    <% unless params[:controller] != "subscribe"%>
-      <%= render partial: "shared/navbar" %>
-    <% end %>
+    <%= render partial: "shared/navbar" %>
     <div class="container mt-2">
       <%= yield %>
     </div>
