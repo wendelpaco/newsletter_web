@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: newsletter_web_production
-  username: newsletter_web
-  password: <%= ENV['NEWSLETTER_WEB_DATABASE_PASSWORD'] %>

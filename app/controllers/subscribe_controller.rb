@@ -1,4 +1,4 @@
-class SubscribeController < ApplicationController
+class SubscribeController < LayoutController
   before_action :authenticate_user!
   before_action :subscribe_params, only: [:new, :create]
   before_action :set_subscribe, only: [:edit, :update, :destroy]
