@@ -44,6 +44,8 @@ gem 'popper_js', '~> 1.16'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.6'
 gem 'bootstrap-growl-rails'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
