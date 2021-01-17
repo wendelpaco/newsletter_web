@@ -1,0 +1,29 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-light border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">
+  <%= link_to root_path, class:"text-dark decoration" do %>
+  NewsLetter <i class="fa fa-envelope"></i></h5>
+  <% end %>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <%= link_to "News", news_path, class:"p-2 text-dark" %>
+    <% if verify_user_admin(current_user) %>
+      <%= link_to "Subscribes", subscribes_path, class:"p-2 text-dark" %>
+    <%end%>
+  </nav>
+  <% unless user_signed_in? %>
+    <%= link_to user_session_path, class:"btn btn-sm btn-outline-primary" do %>
+      <i class="fa fa-sign-out" aria-hidden="true"></i> Entrar
+    <% end %>
+  <% else %>
+    <%= link_to destroy_user_session_path, class:"btn btn-outline-primary", method: :delete do %>
+      <i class="fa fa-sign-out" aria-hidden="true"></i> Sair
+    <% end %>
+  <% end %>
+</div>
+<script type="text/javascript">
+  $('.btn btn-outline-primary').on('click', function(){
+    $('.btn btn-outline-primary').one('click',function(){
+      console.log('showww')
+    })
+
+  })
+</script>

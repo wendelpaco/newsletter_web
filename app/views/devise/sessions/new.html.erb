@@ -1,0 +1,24 @@
+<div class="row fix-row pt-3">
+  <div class="col-md-4">
+    <div class="card mb-3 shadow-sm">
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
+          <div class="text-center mb-5 user-avatar">
+            <i class="fa fa-user-circle mt-4" style="font-size: 140px" aria-hidden="true"></i>
+
+          </div>
+          <div class="form-group icon-my">
+            <i class="fa fa-envelope-open"></i>
+            <%= form.email_field :email, class:"form-control", placeholder: "Digite seu email" %>
+          </div>
+          <div class="form-group icon-my">
+            <i class="fa fa-lock"></i>
+            <%= form.password_field :password, class:"form-control", placeholder:"Digite sua senha" %>
+          </div>
+          <%= form.submit "Entrar", class:"btn btn-primay email-button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%#= render "shared/adsense" %>
