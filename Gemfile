@@ -43,6 +43,8 @@ gem 'jquery-rails'
 gem 'popper_js', '~> 1.16'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.6'
 gem 'bootstrap-growl-rails'
+gem 'activerecord-postgis-adapter'
+
 
 gem 'dotenv-rails', groups: [:development, :test]
 
@@ -59,6 +61,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'mailcatcher'
+  gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :test do

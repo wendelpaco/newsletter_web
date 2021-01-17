@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'posts/index'
   root 'home#index'
-  post '/', to: 'home#create'
+  devise_for :users
   resources :subscribes, controller: 'subscribe', except: [:show]
+  get 'news', to: "newsletter#index"
+  get 'news/:id/:title', to: "posts#index", as: "post"
 end

@@ -84,3 +84,19 @@ input.form-control {
     width: 60%;
     text-align: center;
 }
+
+.icon-like {
+    font-size: 30px;
+    margin-left: 95%;
+    cursor: pointer;
+    color: #0797ff;
+}
+
+.icon-other {
+    font-size: 18px;
+    cursor: pointer;
+    span {
+        font-size: 12px;
+        padding: 0.5rem !important;
+    }
+}
