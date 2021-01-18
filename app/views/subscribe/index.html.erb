@@ -12,15 +12,15 @@
   <% @subscribes.each do |subscribe| %>
     <div class="col-md-3">
       <div class="card mb-3 shadow-sm my-card">
-        <div class="card-body">
-          <p class="card-title fix"> 
+        <div class="card-body fix-card-body">
+          <p class="card-title mb-1 fix"> 
             <span
                 data-toggle="tooltip" 
                 data-placement="top"
                 title="<%= subscribe.name.upcase %>"
                > <%= "#{subscribe.email}"%>
+            <p class="p-0" style="font-size: 12px;"> <%= "se cadastrou à #{time_ago_in_words(subscribe.created_at)} atrás"%></p class="p-0" style="font-size: 12px;">
             </span> 
-            <%= "se cadastrou à #{time_ago_in_words(subscribe.created_at)} atrás"%>
           </p>
           <hr>
           <div class="d-flex justify-content-between align-items-center">

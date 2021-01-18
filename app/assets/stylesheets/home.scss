@@ -71,8 +71,12 @@ input.form-control {
 }
 
 .fix {
-    width: 90%;
+    width: 100%;
     font-size: 12px;
+}
+
+.fix-card-body {
+    padding: 0.80rem !important;
 }
 
 .fix span {
