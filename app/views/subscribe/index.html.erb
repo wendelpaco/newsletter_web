@@ -1,0 +1,36 @@
+<div class="row pt-2">
+  <div class="col-md-12">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-center">Últimas notificações das informações</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row pt-5">
+  <% @subscribes.each do |subscribe| %>
+    <div class="col-md-3">
+      <div class="card mb-3 shadow-sm my-card">
+        <div class="card-body">
+          <p class="card-title fix"> 
+            <span
+                data-toggle="tooltip" 
+                data-placement="top"
+                title="<%= subscribe.name.upcase %>"
+               > <%= "#{subscribe.email}"%>
+            </span> 
+            <%= "se cadastrou à #{time_ago_in_words(subscribe.created_at)} atrás"%>
+          </p>
+          <hr>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <%= link_to  "Editar", edit_subscribe_path(subscribe), class: "btn btn-sm btn-outline-secondary" %>
+              <%= link_to  "Apagar", subscribe_path(subscribe), method: :delete, class: "btn btn-sm btn-secondary", data: { confirm: 'Deseja realmente excluir?' } %>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

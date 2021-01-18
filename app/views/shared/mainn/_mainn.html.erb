@@ -1,0 +1,16 @@
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <!-- /.blog-post -->
+      <%= render partial: "shared/mainn/post/post", post: @posts %>
+      <!-- /.blog-post -->
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+      </nav>
+    </div>
+      <!-- /.blog-about -->
+    <%= render partial: "shared/mainn/about/about" %>
+      <!-- /.blog-about -->
+  </div>
+</main>
