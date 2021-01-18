@@ -46,8 +46,6 @@ gem 'bootstrap-growl-rails'
 gem 'activerecord-postgis-adapter'
 
 
-gem 'dotenv-rails', groups: [:development, :test]
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -62,6 +60,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'mailcatcher'
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :test do
