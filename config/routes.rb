@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :subscribes, controller: 'subscribe', except: [:show]
   get 'newsletter/inscricao', to: "newsletter#index"
-  get 'news/:id/:title', to: "posts#index", as: "post"
+  get 'news/:id/:slug', to: "posts#index", as: "post_id"
 end

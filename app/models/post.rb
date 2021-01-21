@@ -11,10 +11,13 @@
 #
 
 class Post < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   belongs_to :user
 
 
   scope :order_by, ->(order = 'desc'){
-    order("posts.created_at: #{order}")
+    order("posts.created_at #{order}")
   }
 end

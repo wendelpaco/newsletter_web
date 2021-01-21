@@ -1,11 +1,10 @@
 class PostsController < LayoutController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :post_params, only: [:new, :create]
   before_action :set_post, only: [:edit,:update, :destroy]
 
   def index
-    @posts = Post.all
-    @post = Post.find(params[:id])
+    @post= Post.friendly.find(params[:id])
   end
   
   def new
@@ -17,7 +16,7 @@ class PostsController < LayoutController
     @user = current_user.id
     puts @user
     if @post.save
-      redirect_to root_path, notice: 'Obrigado por se cadastrar na Newsletter'
+      redirect_to root_path, notice: 'Post cadastrado com sucesso'
     else
       redirect_to root_path
     end
@@ -27,7 +26,7 @@ class PostsController < LayoutController
 
   def update
     if @post.update(post_params)
-      redirect_to post_path, notice: 'Inscrito atualizado com Sucesso!'
+      redirect_to post_path, notice: 'Post atualizado com Sucesso!'
     else
       render :edit
     end
@@ -35,7 +34,7 @@ class PostsController < LayoutController
 
   def destroy
     if @post.destroy
-      redirect_to post_path, notice: 'Inscrito excludio com Sucesso!'
+      redirect_to post_path, notice: 'Post excludio com Sucesso!'
     else
       render :index
     end
@@ -44,7 +43,7 @@ class PostsController < LayoutController
   private
 
   def post_params
-    params.require(:Post).permit(:title, :description, :author)
+    params.require(:Post).permit(:title, :description, :user_id)
   end
 
   def set_post
