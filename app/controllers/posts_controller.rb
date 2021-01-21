@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 class PostsController < LayoutController
   # Containing constant visibility declaration
-  before_action :authenticate_user!, except: [:index]
-  before_action :post_params, only: [:new, :create]
-  before_action :set_post, only: [:edit,:update, :destroy]
+  before_action :authenticate_user!, except: %i[index]
+  before_action :post_params, only: %i[new create]
+  before_action :set_post, only: %i[edit update destroy]
 
   def index
     @post= Post.friendly.find(params[:id])
