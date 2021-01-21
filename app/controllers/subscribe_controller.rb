@@ -1,7 +1,7 @@
 class SubscribeController < LayoutController
-  before_action :authenticate_user!, except: [:create]
-  before_action :subscribe_params, only: [:new, :create]
-  before_action :set_subscribe, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: %i[create]
+  before_action :subscribe_params, only: %i[new create]
+  before_action :set_subscribe, only: %i[edit update destroy]
 
   def index
     @subscribes = Subscribe.all.order_by
