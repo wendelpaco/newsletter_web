@@ -1,4 +1,4 @@
-title = "Bitcoin morreu?"
+title = "Queda a caminho? Traders alavancam Bitcoin aguardando alta?"
 template_html = '
 <div class="blog-post">
   <h2 class="blog-post-title"><a href="/news/6/Bitcoin%20morreu?">Bitcoin morreu</a></h2>
