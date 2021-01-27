@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <% @posts_on_home.each do |post| %>
-    <div class="row card mb-4 shadow-sm position-relative">
+    <div class="row card-custom mb-4 position-relative">
       <div class="col p-4 d-flex flex-column position-static">
           <div class="icon-like">
             <span 
@@ -10,6 +10,10 @@
               class="fa fa-thumbs-o-up" aria-hidden="true"></span>
           </div>
           <h2 class="blog-post-title"><%= post.title %></h2>
+          <p class="blog-post-meta"><%= "#{l(post.created_at,format:"%B %d, %Y").camelize}" %> by 
+            <a href="#"><%= post.user.full_name.presence.camelize %></a>
+          </p>
+          <%= post.template_html %>
           <div class="row text-center icon-other">
             <div class="col-md-9 p-2 d-flex">
               <span

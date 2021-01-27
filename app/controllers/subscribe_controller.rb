@@ -4,7 +4,7 @@ class SubscribeController < LayoutController
   before_action :set_subscribe, only: %i[edit update destroy]
 
   def index
-    @subscribes = Subscribe.all.order_by
+    @subscribes = Subscribe.all
   end
 
   def create

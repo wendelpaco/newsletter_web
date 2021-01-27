@@ -3,6 +3,6 @@ class HomeController < LayoutController
   # Carrega um novo layout de tela
   layout 'home_page'
   def index
-    @posts_on_home = Post.all.order_by
+    @posts_on_home = Post.all
   end
 end
