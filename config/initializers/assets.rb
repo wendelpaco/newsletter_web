@@ -17,6 +17,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
 Rails.application.config.assets.precompile += %w( .eot .woff .ttf .svg)
 
+Rails.application.config.assets.precompile += %w( home.css)
+
 # IMPORT IMAGES
 Rails.application.config.assets.paths << Rails.root.join("app", "assets", "images")
 Rails.application.config.assets.precompile += %w( .png .jpg .jpeg .svg)

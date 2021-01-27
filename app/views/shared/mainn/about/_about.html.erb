@@ -1,29 +1,19 @@
 <aside class="col-md-4 blog-sidebar">
   <div class="mb-3 bg-light rounded">
-    <div class="card shadow mb-4" style="height: auto !important;">
+    <div class="card-custom mb-4" style="height: auto !important;">
       <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
         <h6 class="m-0 font-weight-bold">O que está acontecendo</h6>
       </div>
       <div class="card-body" style="height: auto !important;">
         <p class="mb-0">Últimos comentários: </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
-        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title}" %> </p>
+        <p> <%= "Fulano comentou no post: #{@posts_on_home.last.title.presence}" %> </p>
         
       </div>
     </div>
   </div>
 
   <div class="mb-3 bg-light rounded">
-      <div class="card shadow mb-4" style="height: auto !important;">
+      <div class="card-custom mb-4" style="height: auto !important;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold">Novidades</h6>
         </div>
@@ -38,7 +28,7 @@
   </div>
 
   <div class="mb-3 bg-light rounded">
-      <div class="card shadow mb-4" style="height: auto !important;">
+      <div class="card-custom mb-4" style="height: auto !important;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold">Novidades</h6>
         </div>
@@ -49,7 +39,7 @@
   </div>
 
   <div class="mb-3 bg-light rounded">
-      <div class="card shadow mb-4" style="height: auto !important;">
+      <div class="card-custom mb-4" style="height: auto !important;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold">Arquivos</h6>
         </div>
@@ -73,7 +63,7 @@
   </div>
 
   <div class="mb-3 bg-light rounded">
-      <div class="card shadow mb-4" style="height: auto !important;">
+      <div class="card-custom mb-4" style="height: auto !important;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold">Rede Sociais</h6>
         </div>
